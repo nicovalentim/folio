@@ -18,22 +18,23 @@ header {
 
 .folioEntry {
     display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
-    width: 40%;
+    margin: 20px;
+    width: 35%;
     text-align: left;
 }
 
-.folioEntry hr {
-    margin-bottom: 10px;
-    margin-top: 5px;
+.folioEntry {
+
 }
 
 .folioEntry img {
-    width: 100%;
+    max-height: 120px;
+    min-width: 240px;
     max-height: 320px;
+    max-width: 640px;
     object-fit: cover;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .footer {
