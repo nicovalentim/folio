@@ -46,7 +46,7 @@ header {
 .header {
     color: #222;
     text-align: left;
-    max-width: 30%;
+    width: 30%;
     margin-bottom: 0;
     margin-left: 2%;
     margin-top: 0.5%;
@@ -67,6 +67,7 @@ header {
     margin-top: 0;
 
 }
+
 
 
 
