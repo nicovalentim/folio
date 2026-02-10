@@ -30,7 +30,6 @@ header {
 }
 
 .folioEntry img {
-    height: 320px;
     width: 100%;
     object-fit: fill;
     margin-top: 10px;
@@ -67,3 +66,4 @@ header {
     margin-top: 0;
 
 }
+
