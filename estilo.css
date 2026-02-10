@@ -20,7 +20,7 @@ header {
     display: inline-block;
     margin-left: 1%;
     margin-right: 1%;
-    max-width: 50%;
+    max-width: 100%;
     text-align: left;
 }
 
@@ -66,4 +66,5 @@ header {
     margin-top: 0;
 
 }
+
 
