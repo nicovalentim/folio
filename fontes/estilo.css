@@ -11,10 +11,6 @@ body {
 	font-optical-sizing: auto;
 }
 
-header {
-	margin-bottom: 0;
-}
-
 .folioEntry {
 	clear: both;
 	display: block;
@@ -24,13 +20,14 @@ header {
 .folioImg {
 	height: 320px;
 	position: relative;
+
 	filter: sepia(70%);
 }
 
 .folioImg h1 {
 	bottom: 0;
-	margin: 0;
 	right: 0;
+	margin: 0;
 	position: absolute;
 
 	font-family: 'Arvo';
@@ -43,14 +40,16 @@ header {
 .footer {
 	background-color: #444;
 	clear: both;
-	color: #ddd;
+	color: #eee;
 	font-size: small;
 	margin-top: 20px;
 	text-align: center;
 }
 
 .header {
-	color: #222;
+	background-color: rgba(0,0,0,0.001);
+	color: #444;
+	padding: 20px;
 	text-align: center;
 }
 
