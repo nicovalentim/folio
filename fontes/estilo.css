@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 a {
 	color: grey;
@@ -10,20 +9,10 @@ body {
 	background-color: #eeeeee;
 	font-family: "SN Pro", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
-	font-style: normal;
 }
 
 header {
 	margin-bottom: 0;
-}
-
-.direita {
-	text-align: right;
-}
-
-.esquerda {
-	text-align: left;
 }
 
 .folioEntry {
@@ -32,27 +21,18 @@ header {
 	margin: 20px;
 }
 
-.folioEntry h1 {
-	color: #444;
-	font-size: 2.5em;
-	margin-bottom: 0;
+.folioImg {
+	color: #eee;
+	font-size: 4em;
+	height: 320px;
+	position: relative;
+	text-align: right;
 }
 
-.folioEntry img {
-	min-height: 320px;
-	min-width: 640px;
-	max-height: 10%;
-	max-width: 40%;
-	object-fit: cover;
-	margin: 10px;
-}
-
-.folioEntry .esquerda {
-	float: left;
-}
-
-.folioEntry .direita {
-	float: right;
+.folioImg p {
+	bottom: 0;
+	margin: 0;
+	position: absolute;
 }
 
 .footer {
@@ -74,7 +54,7 @@ header {
 }
 
 .maintitle {
-	font-family: 'Cormorant Garamond';
+	font-family: 'Arvo';
 	font-size: 400%;
 	margin-bottom: 0;
 	margin-top: 0;
