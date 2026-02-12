@@ -11,6 +11,7 @@ const arquivos = [
 ];
 
 // variáveis/constantes pra função rodar
+// contador de "quantos posts já foram chamados pela função"
 let contador = 0;
 // ebook também, evento pra reagir ao clique
 botao.addEventListener("click", carregar);
@@ -18,19 +19,20 @@ botao.addEventListener("click", carregar);
 // função de carregar arquivo em sequência
 function carregar() {
 
-	// adicionar próximo arquivo
+	// entrada do próximo arquivo
 	const resposta = fetch(arquivos[contador]);
+	// processar arqvuivo (pegar o texto dentro dele)
 	const conteudo = resposta.text();
+	// retornar o conteúdo na página
 	posts.innerHTML += conteudo;
 
-	// subir o contador pro botão sumir
-	contador++
-	}
+		// parte extra da função pra fazer o botão sumir
+		// subir o contador
+		contador++
+}
 
-	// tentando fazer o botão sumir quando não tem mais arquivos
-	if (contador >= arquivos.length) {
-		botao.style.display = "none";
-	}
-	else {
-		botao.textContent = "+";
-	}
+		// se o contador de quantos já foram passar de quantos arquivos existem, faz o botão sumir da tela
+		if (contador >= arquivos.length) {
+			botao.style.display = "none";
+			return;
+		}
