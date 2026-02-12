@@ -18,7 +18,6 @@ mais.addEventListener("click", carregar);
 
 // função de carregar arquivo em sequência
 async function carregar() {
-
 	// entrada do próximo arquivo
 	const response = await fetch(arquivos[contadorPosts]);
 	// processar arqvuivo (pegar o texto dentro dele)
@@ -29,9 +28,9 @@ async function carregar() {
 
 	// subir o contador
 	contadorPosts++
-}
 
-// função para fazer o botão sumir em caso de não haver mais arquivos
-if (contadorPosts >= arquivos.length) {
-	mais.style.display = 'none';
+	// função para fazer o botão sumir em caso de não haver mais arquivos
+	if (contadorPosts >= arquivos.length) {
+		mais.style.display = 'none';
+	}
 }
