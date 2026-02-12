@@ -15,11 +15,11 @@ body {
 .folioEntry {
 	clear: both;
 	display: block;
-	margin: 20px;
+	padding: 1em;
 }
 
 .folioImg {
-	height: 320px;
+	height: 20em;
 	display: flex;
 	filter: sepia(70%);
 }
@@ -33,7 +33,7 @@ body {
 	align-items: flex-end;
 	margin-bottom: 0;
 
-	text-shadow: 3px 3px 3px #1d130b;
+	text-shadow: 2px 2px 2px #1d130b;
 }
 
 .footer {
@@ -41,16 +41,16 @@ body {
 	clear: both;
 	color: #eee;
 	font-size: small;
-	margin-top: 20px;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	margin-top: 1.5em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
 	text-align: center;
 }
 
 .header {
 	background-color: rgba(0,0,0,0.001);
 	color: #3e2718;
-	padding: 20px;
+	padding: 1.5em;
 	text-align: center;
 	text-transform: lowercase;
 }
@@ -59,13 +59,25 @@ body {
 	margin-top: 0;
 }
 
-.maintitle {
-	font-family: 'Arvo';
-	font-size: 4em;
-	margin-bottom: 0;
+.linkwheel {
 	margin-top: 0;
 }
 
-.linkwheel {
+#verMais {
+	background-color: grey;
+	border: none;
+	border-radius: 10%;
+	color: #eee;
+	cursor: pointer;
+	font-family: 'Arvo';
+	font-size: 2em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+#title {
+	font-family: 'Arvo';
+	font-size: 4em;
+	margin-bottom: 0;
 	margin-top: 0;
 }
