@@ -1,7 +1,7 @@
-// botão que aparece na página e executa a funça
+// botão que aparece na página e executa a funça  (ebook)
 const botao = document.querySelector("#verMais");
 
-// lugar aonde os posts vão aparecer
+// lugar aonde os posts vão aparecer (ebook)
 const posts = document.querySelector("#posts");
 
 // lista de posts em html separado pq preguiça refazer a página toda vez no futuro
@@ -12,9 +12,11 @@ const arquivos = [
 
 // variáveis/constantes pra função rodar
 let contador = 0;
+// ebook também, evento pra reagir ao clique
 botao.addEventListener("click", carregar);
 
-async function carregar() {
+// função de carregar arquivo em sequência
+function carregar() {
 
 	// fazer o botão sumir caso n tenha mais arquivos pra carregar (pfv que funcione dessa vez)
 	if (contador >=arquivos.length) {
@@ -22,14 +24,10 @@ async function carregar() {
 		return
 	}
 
-
-	botao.disabled = true
-	botao.textContent = "...";
-
 	// adicionar próximo arquivo
-	const response = await fetch(arquivos[contador]);
-	const html = await response.text();
-	posts.innerHTML += html;
+	const resposta = fetch(arquivos[contador]);
+	const conteudo = resposta.text();
+	posts.innerHTML += conteudo;
 
 	// subir o contador pro botão sumir
 	contador++
@@ -42,6 +40,4 @@ async function carregar() {
 	else {
 		botao.disabled = false;
 		botao.textContent = "+";
-
 	}
-
