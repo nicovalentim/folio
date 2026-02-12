@@ -17,7 +17,7 @@ let contador = 0;
 botao.addEventListener("click", carregar);
 
 // função de carregar arquivo em sequência
-function carregar() {
+async function carregar() {
 
 	// entrada do próximo arquivo
 	const response = await fetch(arquivos[contador]);
@@ -37,5 +37,6 @@ function carregar() {
 			botao.style.display = "none";
 			return;
 		}
+
 
 
