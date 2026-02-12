@@ -6,6 +6,7 @@ botao.addEventListener("click", carregar);
 async function carregar() {
 	const response = await fetch("posts.html");
 	const html = await response.text();
-	posts.innerHTML = html;
 	bota.style.display = "none";
+	posts.innerHTML = html;
 }
+
