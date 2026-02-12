@@ -20,10 +20,9 @@ botao.addEventListener("click", carregar);
 function carregar() {
 
 	// entrada do próximo arquivo
-	const resposta = await fetch(arquivos[contador]);
+	const response = await fetch(arquivos[contador]);
 	// processar arqvuivo (pegar o texto dentro dele)
-	const conteudo = await resposta.text();
-	// as duas com await pq senão ele não espera e já tenta pular pro próximo
+	const conteudo = await response.text();
 	
 	// retornar o conteúdo na página
 	posts.innerHTML += conteudo;
@@ -38,4 +37,5 @@ function carregar() {
 			botao.style.display = "none";
 			return;
 		}
+
 
