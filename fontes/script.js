@@ -45,7 +45,7 @@ async function carregar() {
 	const conteudo = await response.text();
 	
 	// retornar o conteúdo na página
-	posts.innerHTML += conteudo;
+	posts.innerHTML += conteudo, "<div class="separador">♢</div>";
 
 	// subir o contador
 	contadorPosts++

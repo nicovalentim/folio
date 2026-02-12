@@ -12,28 +12,12 @@ body {
 	text-align: center;
 }
 
-.folioEntry {
-	clear: both;
-	display: block;
-	padding: 1em;
+h2 {
+	font-size: 1.5em;
 }
 
-.folioImg {
-	height: 20em;
-	display: flex;
-	filter: sepia(70%);
-}
-
-.folioImg h1 {
-	font-family: 'Arvo';
-	font-size: 3em;
-	color: white;
-
-	display: flex;
-	align-items: flex-end;
-	margin-bottom: 0;
-
-	text-shadow: 2px 2px 2px #1d130b;
+img {
+	width: 80%;
 }
 
 .footer {
@@ -62,16 +46,10 @@ body {
 	margin-top: 0;
 }
 
-#verMais {
-	background-color: grey;
-	border: none;
-	border-radius: 10%;
-	color: #eee;
-	cursor: pointer;
-	font-family: 'Arvo';
-	font-size: 2em;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+.separador {
+	width: 100%;
+	background: #ccc;
+    align-self: stretch;
 }
 
 #title {
@@ -84,4 +62,112 @@ body {
 
 	cursor: pointer;
 	user-select: none;
+}
+
+/* projetos */
+	.folioEntry {
+		clear: both;
+		display: block;
+		padding: 1em;
+	}
+
+	.folioImg {
+		height: 20em;
+		display: flex;
+		filter: sepia(70%);
+	}
+
+	.folioImg h1 {
+		font-family: 'Arvo';
+		font-size: 3em;
+		color: white;
+
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 0;
+
+		text-shadow: 2px 2px 2px #1d130b;
+	}
+
+	#verMais {
+		background-color: grey;
+		border: none;
+		border-radius: 10%;
+		color: #eee;
+		cursor: pointer;
+		font-family: 'Arvo';
+		font-size: 2em;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+
+/* Contato */
+@media (max-width: 768px) {
+    .colunas {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    form {
+        align-items: stretch;
+    }
+}
+
+	.colunas {
+		display: grid;
+		grid-template-columns: 1fr 2px 1fr;
+		gap: 40px;
+		align-items: start;
+	}
+
+	form {
+		display: flex;
+    	flex-direction: column;
+    	align-items: flex-end;
+	}
+
+		input[type=text], textarea {
+			background-color: #eee;
+			border: none;
+			border-bottom: 1px solid;
+			margin-bottom: 0.5em;
+			margin-top: 0.5em;
+			width: 20em;
+		}
+
+		label {
+			align-items: center;
+		}
+
+		textarea {
+			border-right: 1px solid;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+	#formulario {
+		text-align: right;
+	}
+
+	#infos {
+		text-align: left;
+	}
+
+	#infos img {
+		margin-right: 16px;
+		width: 32px;
+	}
+
+.notsharing {
+	opacity: 0;
+	user-select: none;
+}
+
+.erm:hover ~ .notsharing {
+	opacity: 1;
 }
