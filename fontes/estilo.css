@@ -20,8 +20,8 @@ body {
 
 .folioImg {
 	height: 320px;
-	filter: sepia(70%);
 	display: flex;
+	filter: sepia(70%);
 }
 
 .folioImg h1 {
@@ -31,23 +31,25 @@ body {
 
 	display: flex;
 	align-items: flex-end;
+	margin-bottom: 0;
 
-	filter: hue-rotate(180deg);
-	text-shadow: 0px 2px 2px black;
+	text-shadow: 3px 3px 3px #1d130b;
 }
 
 .footer {
-	background-color: #444;
+	background-color: #1d130b;
 	clear: both;
 	color: #eee;
 	font-size: small;
 	margin-top: 20px;
+	padding-bottom: 5px;
+	padding-top: 5px;
 	text-align: center;
 }
 
 .header {
 	background-color: rgba(0,0,0,0.001);
-	color: #444;
+	color: #3e2718;
 	padding: 20px;
 	text-align: center;
 	text-transform: lowercase;
