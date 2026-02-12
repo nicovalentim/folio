@@ -18,12 +18,6 @@ botao.addEventListener("click", carregar);
 // função de carregar arquivo em sequência
 function carregar() {
 
-	// fazer o botão sumir caso n tenha mais arquivos pra carregar (pfv que funcione dessa vez)
-	if (contador >=arquivos.length) {
-		botao.style.display = "none";
-		return
-	}
-
 	// adicionar próximo arquivo
 	const resposta = fetch(arquivos[contador]);
 	const conteudo = resposta.text();
@@ -33,11 +27,10 @@ function carregar() {
 	contador++
 	}
 
-	// maldito botão, some logo
-	if (contador >=arquivos.length) {
+	// tentando fazer o botão sumir quando não tem mais arquivos
+	if (contador >= arquivos.length) {
 		botao.style.display = "none";
 	}
 	else {
-		botao.disabled = false;
 		botao.textContent = "+";
 	}
