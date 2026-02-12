@@ -27,7 +27,7 @@ async function carregar() {
 	botao.textContent = "...";
 
 	// adicionar próximo arquivo
-	const response = await fetch("frontpage/posts.html");
+	const response = await fetch(arquivos[contador]);
 	const html = await response.text();
 	posts.innerHTML += html;
 
@@ -44,3 +44,4 @@ async function carregar() {
 		botao.textContent = "+";
 
 	}
+
