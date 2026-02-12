@@ -1,3 +1,24 @@
+// função de mudar a cor do título da página
+// eu fiz isso em outro arquivo antes, pra tentar resolver o problema de clicar um botão fazer carregar variáveis ao invés de constantes
+ 
+const tituloCor = document.querySelector("#title");
+const cores =  ["cyan", "magenta", "yellow", "#3e2718"]
+let contadorCores = 0
+
+tituloCor.addEventListener("click", () => {
+	// muda a cor na ordem da lista
+    tituloCor.style.color = cores[contadorCores];
+	contadorCores++
+
+	// se o contador de cores passar do limite de cores possíveis
+	if (contadorCores >= cores.length) {
+		contadorCores = 0;
+	}
+});
+
+// ------------------------------------------------------
+// função de carregar novos posts
+
 // botão que aparece na página e executa a funça  (ebook)
 const mais = document.querySelector("#verMais");
 
@@ -32,6 +53,6 @@ async function carregar() {
 	// função para fazer o botão sumir em caso de não haver mais arquivos
 	if (contadorPosts >= arquivos.length) {
 		mais.style.display = 'none';
-			posts.innerHTML += "Não há mais posts.";
+		posts.innerHTML += "Não há mais posts.";
 	}
 }

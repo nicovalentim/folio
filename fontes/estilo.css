@@ -49,7 +49,6 @@ body {
 
 .header {
 	background-color: rgba(0,0,0,0.001);
-	color: #3e2718;
 	padding: 1.5em;
 	text-align: center;
 	text-transform: lowercase;
@@ -76,8 +75,13 @@ body {
 }
 
 #title {
+	color: #eee;
 	font-family: 'Arvo';
 	font-size: 4em;
 	margin-bottom: 0;
 	margin-top: 0;
+	text-shadow: 2px 3px 4px #1d130b;
+
+	cursor: pointer;
+	user-select: none;
 }
