@@ -32,5 +32,6 @@ async function carregar() {
 	// função para fazer o botão sumir em caso de não haver mais arquivos
 	if (contadorPosts >= arquivos.length) {
 		mais.style.display = 'none';
+			posts.innerHTML += "Não há mais posts.";
 	}
 }
