@@ -1,5 +1,5 @@
 // botão que aparece na página e executa a funça  (ebook)
-const botao = document.querySelector("#verMais");
+const mais = document.querySelector("#verMais");
 
 // lugar aonde os posts vão aparecer (ebook)
 const posts = document.querySelector("#posts");
@@ -14,7 +14,7 @@ const arquivos = [
 // contador de "quantos posts já foram chamados pela função"
 let contador = 0;
 // ebook também, evento pra reagir ao clique
-botao.addEventListener("click", carregar);
+mais.addEventListener("click", carregar);
 
 // função de carregar arquivo em sequência
 async function carregar() {
@@ -30,4 +30,9 @@ async function carregar() {
 		// parte extra da função pra fazer o botão sumir
 		// subir o contador
 		contador++
+}
+
+// função para o botão sumir quando não houverem mais arquivos
+if contador >= arquivos.length {
+	mais.style.display: 'none';
 }
