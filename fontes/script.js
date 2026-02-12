@@ -31,12 +31,3 @@ async function carregar() {
 		// subir o contador
 		contador++
 }
-
-		// se o contador de quantos já foram passar de quantos arquivos existem, faz o botão sumir da tela
-		if (contador >= arquivos.length) {
-			botao.style.display = "none";
-		}
-
-
-
-
