@@ -12,7 +12,7 @@ const arquivos = [
 
 // variáveis/constantes pra função rodar
 // contador de "quantos posts já foram chamados pela função"
-let contador = 0;
+let contadorPosts = 0;
 // ebook também, evento pra reagir ao clique
 mais.addEventListener("click", carregar);
 
@@ -20,19 +20,18 @@ mais.addEventListener("click", carregar);
 async function carregar() {
 
 	// entrada do próximo arquivo
-	const response = await fetch(arquivos[contador]);
+	const response = await fetch(arquivos[contadorPosts]);
 	// processar arqvuivo (pegar o texto dentro dele)
 	const conteudo = await response.text();
 	
 	// retornar o conteúdo na página
 	posts.innerHTML += conteudo;
 
-		// parte extra da função pra fazer o botão sumir
-		// subir o contador
-		contador++
+	// subir o contador
+	contadorPosts++
 }
 
 // função para o botão sumir quando não houverem mais arquivos
-if contador >= arquivos.length {
+if contadorPosts >= arquivos.length {
 	mais.style.display: 'none';
 }
