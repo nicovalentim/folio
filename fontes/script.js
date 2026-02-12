@@ -6,8 +6,8 @@ const posts = document.querySelector("#posts");
 
 // lista de posts em html separado pq preguiça refazer a página toda vez no futuro
 const arquivos = [
-	"post1.html",
-	"post2.html"
+	"frontpage/post1.html",
+	"frontpage/post2.html"
 ];
 
 // variáveis/constantes pra função rodar
@@ -24,7 +24,7 @@ async function carregar() {
 
 
 	botao.disabled = true
-	botao.textContent = "Carregando...";
+	botao.textContent = "...";
 
 	// adicionar próximo arquivo
 	const response = await fetch("frontpage/posts.html");
@@ -42,4 +42,5 @@ async function carregar() {
 	else {
 		botao.disabled = false;
 		botao.textContent = "+";
+
 	}
