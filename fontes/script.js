@@ -45,7 +45,7 @@ async function carregar() {
 	const conteudo = await response.text();
 	
 	// retornar o conteúdo na página
-	posts.innerHTML += conteudo, "<div class="separador">♢</div>";
+	posts.innerHTML += conteudo;
 
 	// subir o contador
 	contadorPosts++
@@ -55,4 +55,5 @@ async function carregar() {
 		mais.style.display = 'none';
 		posts.innerHTML += "Não há mais posts.";
 	}
+
 }
