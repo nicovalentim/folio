@@ -30,8 +30,3 @@ async function carregar() {
 	// subir o contador
 	contadorPosts++
 }
-
-// função para o botão sumir quando não houverem mais arquivos
-if contadorPosts >= arquivos.length {
-	mais.style.display: 'none';
-}
