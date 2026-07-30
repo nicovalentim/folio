@@ -1,0 +1,50 @@
+:root
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+nav,
+nav a {
+    color: #fff;
+    mix-blend-mode: difference;
+}
+    nav {
+        display: flex;
+        align-items: baseline;
+        padding: 1em 0;
+
+        position: fixed;
+        left: 2.5%;
+        width: 95%;
+    }
+        nav a {
+            align-content: center;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+        nav div {
+            margin-left: auto;
+        }
+        nav p {
+            display: block;
+        }
+
+/* seções */
+section {
+    height: 100%;
+}
+    #home {
+        background-color: white;
+    }
+    #sobre {
+        background-color: black;
+    }
+    #projetos {
+        background-color: white;
+    }
+    #contato {
+        background-color: black;
+    }
