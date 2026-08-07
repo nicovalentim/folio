@@ -5,7 +5,7 @@ https://gaoyang.work/
 <html>
 
 <head>
-	<link rel="stylesheet" href="_style.css">
+	<link rel="stylesheet" href="style.css">
     <title>nicovalentim</title>
 </head>
 
@@ -22,16 +22,45 @@ https://gaoyang.work/
 
     <section id="home" data-nav-color="black">
 
-    <p>
-        Texto de teste normar aqui
-    </p>
+        <header>
+            <h2>Título da seção</h2>
+            <h1>Um texto de lorem ipsum que eu quero usar de título.</h1>
+            <p>Um texto de lorem ipsum que eu quero usar de subtítulo</p>
+        </header>
 
     </section>
 
-    <section id="sobre" data-nav-color="white"></section>
-    <section id="projetos" data-nav-color="black"></section>
-    <section id="contato" data-nav-color="white"></section>
+    <section id="sobre" data-nav-color="black">
+
+        <img />
+
+    </section>
+
+    <section id="projetos" data-nav-color="black">
+
+        <div id="projetos"></div>
+
+    </section>
+
+    <section id="contato" data-nav-color="black">
+
+        <h1>Fale comigo!</h1>
+        <form class="form" id="contato" onsubmit="return false;">
+            <label>Nome</label>
+            <input type="text" name="contatoNome" placeholder="Digite seu nome" required />
+            <label>Assunto</label>
+            <input type="text" name="contatoAssunto" placeholder="Digite o assunto" required />
+            <label>Mensagem</label>
+            <textarea name="contatoMensagem" placeholder="Digite sua mensagem aqui" required ></textarea>
+            <button name="enviarEmail" type="submit">Enviar</button>
+        </form>
+        <div>
+            <a href="https://github.com/nicovalentim"><img src="imagens/git.png" /></a>
+            <a href=""><img src="imagens/wpp.png" /></a>
+        </div>
+
+    </section>
 
 </body>
-    <script src="_script.js"></script>
+    <script src="script.js"></script>
 </html>

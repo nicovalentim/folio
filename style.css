@@ -1,6 +1,9 @@
-:root
+:root {
+    --preto: 0, 0, 0;
+}
 
 body {
+    color: rgb(var(--preto));
     margin: 0;
     padding: 0;
 }
@@ -24,26 +27,52 @@ nav {
     nav div {
         margin-left: auto;
     }
-    p {
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        display: block;
-    }
 
-/* seções */
 section {
     height: 100vh;
 }
     #home {
         background-color: white;
     }
+        header {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+        }
+
     #sobre {
-        background-color: black;
+        background-color: cyan;
     }
     #projetos {
-        background-color: white;
+        background-color: magenta;
     }
+
     #contato {
-        background-color: black;
+        background-color: white;
+
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
     }
+        #contato button,
+        #contato input,
+        #contato textarea {
+            font: inherit;
+            text-align: inherit;
+        }
+            #contato input,
+            #contato textarea {
+                background-color: inherit;
+                border: none;
+                border-bottom: 1px solid rgba(var(--preto),0.8);
+                margin: 8px 0;
+            }
+            #contato textarea {
+                resize: none;
+            }
+        #contato img {
+            height: 20px;
+            width: auto;
+            margin-right: 2px;
+        }
