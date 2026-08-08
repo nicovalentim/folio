@@ -2,18 +2,23 @@ let idiomaAtual = "en";
 
 const traducoes = {
     en: {
-        navHome: "home",
-        navSobre: "about",
-        navProjetos: "projects",
         navContato: "contact",
+        navHome: "home",
+        navProjetos: "projects",
+        navSobre: "about",
+
         homeSubtitulo: "section subtitle",
         homeTitulo: 'A lorem ipsum text that <span class="marcado">I want</span> to use as a title.',
         homeDescricao: "A lorem ipsum text that I want to use as a subtitle",
+
         carregando: "loading projects...",
         semProjetos: "No projects found.",
         erroProjetos: "Could not load projects.",
         gitLink: "view project on github",
         semDescricao: "No description.",
+
+        imgSobre: "imagens/about_en.gif",
+
         contatoTitulo: 'say <br /><span class="marcado">hello</span>!',
         labelNome: "Name",
         placeholderNome: "Type your name",
@@ -22,22 +27,26 @@ const traducoes = {
         labelMensagem: "Message",
         placeholderMensagem: "Type your message here",
         btnEnviar: "Send",
-        emailSucesso: "Your email app was opened!",
-        imgSobre: "imagens/about_en.gif" 
+        emailSucesso: "Your email app was opened!"
     },
     pt: {
-        navHome: "home",
-        navSobre: "sobre",
-        navProjetos: "projetos",
         navContato: "contato",
+        navHome: "home",
+        navProjetos: "projetos",
+        navSobre: "sobre",
+
         homeSubtitulo: "subtítulo da seção",
         homeTitulo: 'Um texto de lorem ipsum que <span class="marcado">eu quero</span> usar de título.',
         homeDescricao: "Um texto de lorem ipsum que eu quero usar de subtítulo",
+
         carregando: "carregando projetos...",
         semProjetos: "Nenhum projeto encontrado.",
         erroProjetos: "Não foi possível carregar os projetos.",
         gitLink: "ver projeto no github",
         semDescricao: "Sem descrição.",
+        
+        imgSobre: "imagens/about_pt.gif",
+
         contatoTitulo: 'me manda <br /><span class="marcado">um alô</span>!',
         labelNome: "Nome",
         placeholderNome: "Digite seu nome",
@@ -46,8 +55,7 @@ const traducoes = {
         labelMensagem: "Mensagem",
         placeholderMensagem: "Digite sua mensagem aqui",
         btnEnviar: "Enviar",
-        emailSucesso: "Seu aplicativo de e-mail foi aberto!",
-        imgSobre: "imagens/about_pt.gif" 
+        emailSucesso: "Seu aplicativo de e-mail foi aberto!"
     }
 };
 
