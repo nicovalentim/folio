@@ -1,4 +1,5 @@
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
     <title>nicovalentim</title>
@@ -7,21 +8,21 @@
 <body>
     <nav>
         nicovalentim
-        - <button id="btnIdioma" class="btn-lang">EN</button>
+        - <button id="btnIdioma" class="btn-lang"></button>
         <div>
-            <a href="#home" data-i18n="navHome">home</a> -
-            <a href="#sobre" data-i18n="navSobre">sobre</a> -
-            <a href="#projetos" data-i18n="navProjetos">projetos</a> -
-            <a href="#contato" data-i18n="navContato">contato</a>
+            <a href="#home" data-i18n="navHome"></a> -
+            <a href="#sobre" data-i18n="navSobre"></a> -
+            <a href="#projetos" data-i18n="navProjetos"></a> -
+            <a href="#contato" data-i18n="navContato"></a>
         </div>
     </nav>
 
     <section id="home" data-nav-color="rgb(var(--luminosidadeAlta))">
 
         <header>
-            <h2 data-i18n="homeSubtitle">subtítulo da seção</h2>
-            <h1 data-i18n="homeTitle">Um texto de lorem ipsum que <span class="marcado">eu quero</span> usar de título.</h1>
-            <p data-i18n="homeDescription">Um texto de lorem ipsum que eu quero usar de subtítulo</p>
+            <h2 data-i18n="homeSubtitulo"></h2>
+            <h1 data-i18n="homeTitulo"></h1>
+            <p data-i18n="homeDescricao"></p>
         </header>
 
     </section>
@@ -29,39 +30,39 @@
     <section id="projetos" data-nav-color="rgb(var(--luminosidadeBaixa))">
 
         <div class="carrossel">
-            <button class="seta seta-esquerda" id="btnAnterior">&lt;</button>
+            <button class="seta" id="btnAnterior"><</button>
 
             <div class="carrossel-container" id="projetosContainer">
-                <p id="projetosLoading" data-i18n="loading">carregando projetos...</p>
+                <p data-i18n="carregando"></p>
             </div>
 
-            <button class="seta seta-direita" id="btnProximo">&gt;</button>
+            <button class="seta" id="btnProximo">></button>
         </div>
 
     </section>
 
     <section id="sobre" data-nav-color="rgb(var(--luminosidadeBaixa))">
 
-        <img src="imagens/about.gif" />
+        <img id="imgSobre" data-i18n-src="imgSobre" />
 
     </section>
 
     <section id="contato" data-nav-color="rgb(var(--luminosidadeAlta))">
 
-        <h1 data-i18n="contactTitle">me manda <br />
-            <span class="marcado">um alô</span>!</h1>
+        <h1 data-i18n="contactTitle"></h1>
         <form class="form" id="contato" onsubmit="return false;">
-            <label data-i18n="labelNome">Nome</label>
-            <input type="text" name="contatoNome" data-i18n-placeholder="placeholderNome" placeholder="Digite seu nome" required />
-            <label data-i18n="labelAssunto">Assunto</label>
-            <input type="text" name="contatoAssunto" data-i18n-placeholder="placeholderAssunto" placeholder="Digite o assunto" required />
-            <label data-i18n="labelMensagem">Mensagem</label>
-            <textarea name="contatoMensagem" data-i18n-placeholder="placeholderMensagem" placeholder="Digite sua mensagem aqui" required ></textarea>
-            <button name="enviarEmail" type="submit" data-i18n="btnEnviar">Enviar</button>
+            <label data-i18n="labelNome"></label>
+            <input type="text" name="contatoNome" data-i18n-placeholder="placeholderNome" required />
+            <label data-i18n="labelAssunto"></label>
+            <input type="text" name="contatoAssunto" data-i18n-placeholder="placeholderAssunto" required />
+            <label data-i18n="labelMensagem"></label>
+            <textarea name="contatoMensagem" data-i18n-placeholder="placeholderMensagem" required ></textarea>
+            <button name="enviarEmail" type="submit" data-i18n="btnEnviar"></button>
         </form>
 
     </section>
 
 <script src="script.js"></script>
+<script src="text.js"></script>
 </body>
 </html>

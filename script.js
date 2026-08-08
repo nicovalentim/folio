@@ -1,3 +1,5 @@
+// import "text.js";
+
 // barra de navegação
 const nav = document.querySelector("nav");
 
@@ -15,107 +17,6 @@ window.addEventListener("scroll", () => {
         nav.style.color = color;
     }
 });
-
-// traduções
-let idiomaAtual = "pt";
-
-const traducoes = {
-    pt: {
-        navHome: "home",
-        navSobre: "sobre",
-        navProjetos: "projetos",
-        navContato: "contato",
-        homeSubtitle: "subtítulo da seção",
-        homeTitle: 'Um texto de lorem ipsum que <span class="marcado">eu quero</span> usar de título.',
-        homeDescription: "Um texto de lorem ipsum que eu quero usar de subtítulo",
-        loading: "carregando projetos...",
-        noProjects: "Nenhum projeto encontrado.",
-        errorProjects: "Não foi possível carregar os projetos.",
-        gitLink: "ver projeto no github",
-        noDescription: "Sem descrição.",
-        contactTitle: 'me manda <br /><span class="marcado">um alô</span>!',
-        labelNome: "Nome",
-        placeholderNome: "Digite seu nome",
-        labelAssunto: "Assunto",
-        placeholderAssunto: "Digite o assunto",
-        labelMensagem: "Mensagem",
-        placeholderMensagem: "Digite sua mensagem aqui",
-        btnEnviar: "Enviar",
-        emailSucesso: "Seu aplicativo de e-mail foi aberto!"
-    },
-    en: {
-        navHome: "home",
-        navSobre: "about",
-        navProjetos: "projects",
-        navContato: "contact",
-        homeSubtitle: "section subtitle",
-        homeTitle: 'A lorem ipsum text that <span class="marcado">I want</span> to use as a title.',
-        homeDescription: "A lorem ipsum text that I want to use as a subtitle",
-        loading: "loading projects...",
-        noProjects: "No projects found.",
-        errorProjects: "Could not load projects.",
-        gitLink: "view project on github",
-        noDescription: "No description.",
-        contactTitle: 'say <br /><span class="marcado">hello</span>!',
-        labelNome: "Name",
-        placeholderNome: "Type your name",
-        labelAssunto: "Subject",
-        placeholderAssunto: "Type the subject",
-        labelMensagem: "Message",
-        placeholderMensagem: "Type your message here",
-        btnEnviar: "Send",
-        emailSucesso: "Your email app was opened!"
-    }
-};
-
-function extrairDescricao(texto, lang) {
-    if (!texto) return traducoes[lang].noDescription;
-    
-    const regex = /\[PT\]([\s\S]*?)(?=\[EN\]|$)|\[EN\]([\s\S]*?)(?=\[PT\]|$)/gi;
-    let descPT = "";
-    let descEN = "";
-    let match;
-
-    while ((match = regex.exec(texto)) !== null) {
-        if (match[1]) descPT += match[1].trim() + " ";
-        if (match[2]) descEN += match[2].trim() + " ";
-    }
-
-    if (lang === "pt" && descPT) return descPT.trim();
-    if (lang === "en" && descEN) return descEN.trim();
-
-    // Caso não encontre as tags [PT] ou [EN], retorna o texto original completo
-    return texto;
-}
-
-function alternarIdioma() {
-    idiomaAtual = idiomaAtual === "pt" ? "en" : "pt";
-    document.getElementById("btnIdioma").textContent = idiomaAtual === "pt" ? "EN" : "PT";
-
-    // Atualiza elementos estáticos
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const chave = el.getAttribute("data-i18n");
-        if (traducoes[idiomaAtual][chave]) {
-            el.innerHTML = traducoes[idiomaAtual][chave];
-        }
-    });
-
-    // Atualiza placeholders
-    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-        const chave = el.getAttribute("data-i18n-placeholder");
-        if (traducoes[idiomaAtual][chave]) {
-            el.placeholder = traducoes[idiomaAtual][chave];
-        }
-    });
-
-    // Reconstruir lista de projetos com o novo idioma
-    if (projetos.length > 0) {
-        criarProjetos();
-        mostrarProjeto(indiceAtual);
-    }
-}
-
-document.getElementById("btnIdioma").addEventListener("click", alternarIdioma);
 
 // contato
 function enviarEmail() {
@@ -197,7 +98,7 @@ function criarProjetos() {
             `${encodeURIComponent(projeto.default_branch)}/` +
             `${PREVIEW_FILE}`;
 
-        const descricaoTradução = extrairDescricao(projeto.description, idiomaAtual);
+        const descricaoTraducao = extrairDescricao(projeto.description, idiomaAtual);
 
         elemento.innerHTML = `
 <div>
@@ -209,7 +110,7 @@ function criarProjetos() {
 
     <span>
         <h2>${projeto.name}</h2>
-        <h1>${descricaoTradução}</h1>
+        <h1>${descricaoTraducao}</h1>
 
         <p>
             <a
