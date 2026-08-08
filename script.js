@@ -1,4 +1,5 @@
-// import "text.js";
+import { extrairDescricao, traducoes, idiomaAtual } from "./text.js";
+import { outros } from './others.js';
 
 // barra de navegação
 const nav = document.querySelector("nav");
@@ -60,26 +61,38 @@ const projetosContainer = document.getElementById("projetosContainer");
 async function carregarProjetos() {
     try {
         const resposta = await fetch(`https://api.github.com/users/nicovalentim/repos?per_page=100&sort=updated`);
-            if (!resposta.ok) throw new Error(`GitHub API retornou ${resposta.status}`);
-
-        const repositorios = await resposta.json();
-            projetos = repositorios.filter((repo) =>
+        
+        let reposGithub = [];
+        if (resposta.ok) {
+            const repositorios = await resposta.json();
+            reposGithub = repositorios.filter((repo) =>
                 Array.isArray(repo.topics) &&
                 repo.topics.includes(PORTFOLIO_TOPIC)
             );
-            if (projetos.length === 0) {
-                projetosContainer.innerHTML = `<p>${traducoes[idiomaAtual].noProjects}</p>`;
-                btnAnterior.style.display = "none";
-                btnProximo.style.display = "none";
-                return;
-            }
+        }
+        projetos = [...reposGithub, ...outros];
+
+        if (projetos.length === 0) {
+            projetosContainer.innerHTML = `<p>${traducoes[idiomaAtual].semProjetos}</p>`;
+            btnAnterior.style.display = "none";
+            btnProximo.style.display = "none";
+            return;
+        }
+
         criarProjetos();
         mostrarProjeto(0);
+
     } catch (erro) {
         console.error("Erro ao carregar projetos:", erro);
-        projetosContainer.innerHTML = `<p>${traducoes[idiomaAtual].errorProjects}</p>`;
-        btnAnterior.style.display = "none";
-        btnProximo.style.display = "none";
+        projetos = [...outros];
+        if (projetos.length > 0) {
+            criarProjetos();
+            mostrarProjeto(0);
+        } else {
+            projetosContainer.innerHTML = `<p>${traducoes[idiomaAtual].erroProjetos}</p>`;
+            btnAnterior.style.display = "none";
+            btnProximo.style.display = "none";
+        }
     }
 }
 
@@ -89,16 +102,19 @@ function criarProjetos() {
 
     projetos.forEach((projeto, index) => {
         const elemento = document.createElement("div");
-            elemento.classList.add("exemplo");
-            elemento.id = `projeto_${index}`;
+        elemento.classList.add("exemplo");
+        elemento.id = `projeto_${index}`;
 
-        const imagem =
-            `https://raw.githubusercontent.com/nicovalentim/` +
-            `${encodeURIComponent(projeto.name)}/` +
-            `${encodeURIComponent(projeto.default_branch)}/` +
-            `${PREVIEW_FILE}`;
+        const imagem = projeto.imagemCustomizada 
+            ? projeto.imagemCustomizada 
+            : `https://raw.githubusercontent.com/nicovalentim/${encodeURIComponent(projeto.name)}/${encodeURIComponent(projeto.default_branch)}/${PREVIEW_FILE}`;
 
         const descricaoTraducao = extrairDescricao(projeto.description, idiomaAtual);
+
+        let rotuloLink = traducoes[idiomaAtual].gitLink;
+        if (projeto.textoLink && projeto.textoLink[idiomaAtual]) {
+            rotuloLink = projeto.textoLink[idiomaAtual];
+        }
 
         elemento.innerHTML = `
 <div>
@@ -114,12 +130,12 @@ function criarProjetos() {
 
         <p>
             <a
-                class = "linkToGit"
+                class="linkAoProjeto"
                 href="${projeto.html_url}"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                ${traducoes[idiomaAtual].gitLink}
+                ${rotuloLink}
             </a>
         </p>
     </span>
@@ -129,6 +145,13 @@ function criarProjetos() {
         projetosContainer.appendChild(elemento);
     });
 }
+
+window.rerenderizarProjetos = () => {
+    if (typeof projetos !== "undefined" && projetos.length > 0) {
+        criarProjetos();
+        mostrarProjeto(indiceAtual);
+    }
+};
 
 // carrossel
 function mostrarProjeto(index) {

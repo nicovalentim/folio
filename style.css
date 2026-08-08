@@ -210,14 +210,14 @@ section {
 
         margin-left: 32px;
     }
-    .linkToGit {
+    .linkAoProjeto {
         background-color: rgb(var(--luminosidadeBaixa));
         color: rgb(var(--luminosidadeAlta)) !important;
         font-weight: 500;
 
         padding: 4px 8px;
     }  
-        .linkToGit:hover {
+        .linkAoProjeto:hover {
             background-color: rgb(var(--saturacaoAlta));
         }
 

@@ -1,6 +1,6 @@
-let idiomaAtual = "en";
+export let idiomaAtual = "en";
 
-const traducoes = {
+export const traducoes = {
     en: {
         navContato: "contact",
         navHome: "home",
@@ -87,7 +87,7 @@ const traducoes = {
     }
 };
 
-function extrairDescricao(texto, lang) {
+export function extrairDescricao(texto, lang) {
     if (!texto) return traducoes[lang].semDescricao;
     
     const regex = /\[PT\]([\s\S]*?)(?=\[EN\]|\[JP\]|$)|\[EN\]([\s\S]*?)(?=\[PT\]|\[JP\]|$)|\[JP\]([\s\S]*?)(?=\[PT\]|\[EN\]|$)/gi;
@@ -110,29 +110,27 @@ function extrairDescricao(texto, lang) {
 function atualizarInterface() {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
         const chave = el.getAttribute("data-i18n");
-        if (traducoes[idiomaAtual][chave]) el.innerHTML = traducoes[idiomaAtual][chave];
+        if (traducoes[idiomaAtual] && traducoes[idiomaAtual][chave]) el.innerHTML = traducoes[idiomaAtual][chave];
     });
-
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
         const chave = el.getAttribute("data-i18n-placeholder");
-        if (traducoes[idiomaAtual][chave]) el.placeholder = traducoes[idiomaAtual][chave];
+        if (traducoes[idiomaAtual] && traducoes[idiomaAtual][chave]) el.placeholder = traducoes[idiomaAtual][chave];
     });
-
     document.querySelectorAll("[data-i18n-src]").forEach((el) => {
         const chave = el.getAttribute("data-i18n-src");
-        if (traducoes[idiomaAtual][chave]) el.src = traducoes[idiomaAtual][chave];
+        if (traducoes[idiomaAtual] && traducoes[idiomaAtual][chave]) el.src = traducoes[idiomaAtual][chave];
     });
 
-    if (typeof projetos !== "undefined" && projetos.length > 0) {
-        criarProjetos();
-        mostrarProjeto(indiceAtual);
-    }
+    if (typeof window.rerenderizarProjetos === "function") window.rerenderizarProjetos();
 }
 
 function mudarIdioma(lang) {
     idiomaAtual = lang;
     atualizarInterface();
 }
+
+window.mudarIdioma = mudarIdioma;
+window.idiomaAtual = idiomaAtual;
 
 document.addEventListener("DOMContentLoaded", () => {
     atualizarInterface();
