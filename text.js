@@ -7,9 +7,9 @@ const traducoes = {
         navProjetos: "projects",
         navSobre: "about",
 
-        homeSubtitulo: "section subtitle",
-        homeTitulo: 'A lorem ipsum text that <span class="marcado">I want</span> to use as a title.',
-        homeDescricao: "A lorem ipsum text that I want to use as a subtitle",
+        homeSubtitulo: "Lorem ipsum",
+        homeTitulo: 'Lorem ipsum dolor <span class="marcado">sit amet</span>.',
+        homeDescricao: "Maecenas sed erat at est condimentum elementum vel quis nulla. Sed interdum lacinia est, vel consectetur turpis aliquet eu.",
 
         carregando: "loading projects...",
         semProjetos: "No projects found.",

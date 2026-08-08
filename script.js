@@ -105,7 +105,7 @@ function criarProjetos() {
     <img
         src="${imagem}"
         alt="${projeto.name}"
-        onerror="this.onerror=null; this.src='imagens/_exemplo.jpg';"
+        onerror="this.onerror=null; this.src='./imagens/padrao.jpg';"
     />
 
     <span>
