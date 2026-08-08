@@ -19,7 +19,7 @@ const traducoes = {
 
         imgSobre: "imagens/about_en.gif",
 
-        contatoTitulo: 'say <br /><span class="marcado">hello</span>!',
+        contatoTitulo: 'tell me <br /><span class="marcado">something</span><br />new!',
         labelNome: "Name",
         placeholderNome: "Type your name",
         labelAssunto: "Subject",
@@ -56,27 +56,58 @@ const traducoes = {
         placeholderMensagem: "Digite sua mensagem aqui",
         btnEnviar: "Enviar",
         emailSucesso: "Seu aplicativo de e-mail foi aberto!"
+    },
+    ja: {
+        navContato: "お問い合わせ",
+        navHome: "ホーム",
+        navProjetos: "プロジェクト",
+        navSobre: "概要",
+
+        homeSubtitulo: "サブタイトル",
+        homeTitulo: 'ここに<span class="marcado">タイトル</span>が入ります。',
+        homeDescricao: "ここに説明文が入ります。",
+
+        carregando: "読み込み中...",
+        semProjetos: "プロジェクトが見つかりません。",
+        erroProjetos: "プロジェクトの読み込みに失敗しました。",
+        gitLink: "GitHubで見る",
+        semDescricao: "説明なし。",
+        
+        imgSobre: "imagens/about_ja.gif",
+
+        contatoTitulo: '何かを<br /><span class="marcado">伝えて</span>！',
+        labelNome: "お名前",
+        placeholderNome: "お名前を入力してください",
+        labelAssunto: "件名",
+        placeholderAssunto: "件名を入力してください",
+        labelMensagem: "メッセージ",
+        placeholderMensagem: "メッセージを入力してください",
+        btnEnviar: "送信",
+        emailSucesso: "メールアプリが開きました！"
     }
 };
 
 function extrairDescricao(texto, lang) {
     if (!texto) return traducoes[lang].semDescricao;
-    const regex = /\[PT\]([\s\S]*?)(?=\[EN\]|$)|\[EN\]([\s\S]*?)(?=\[PT\]|$)/gi;
-        let descPT = "";
-        let descEN = "";
-        let match;
-            while ((match = regex.exec(texto)) !== null) {
-                if (match[1]) descPT += match[1].trim() + " ";
-                if (match[2]) descEN += match[2].trim() + " ";
-            }
+    
+    const regex = /\[PT\]([\s\S]*?)(?=\[EN\]|\[JP\]|$)|\[EN\]([\s\S]*?)(?=\[PT\]|\[JP\]|$)|\[JP\]([\s\S]*?)(?=\[PT\]|\[EN\]|$)/gi;
+    let descPT = "", descEN = "", descJA = "";
+    let match;
+
+    while ((match = regex.exec(texto)) !== null) {
+        if (match[1]) descPT += match[1].trim() + " ";
+        if (match[2]) descEN += match[2].trim() + " ";
+        if (match[3]) descJA += match[3].trim() + " ";
+    }
 
     if (lang === "pt" && descPT) return descPT.trim();
     if (lang === "en" && descEN) return descEN.trim();
+    if (lang === "ja" && descJA) return descJA.trim();
+
+    return texto;
 }
 
 function atualizarInterface() {
-    document.getElementById("btnIdioma").textContent = idiomaAtual === "pt" ? "EN/US" : "PT/BR";
-
     document.querySelectorAll("[data-i18n]").forEach((el) => {
         const chave = el.getAttribute("data-i18n");
         if (traducoes[idiomaAtual][chave]) el.innerHTML = traducoes[idiomaAtual][chave];
@@ -98,13 +129,18 @@ function atualizarInterface() {
     }
 }
 
-function alternarIdioma() {
-    idiomaAtual = idiomaAtual === "pt" ? "en" : "pt";
+function mudarIdioma(lang) {
+    idiomaAtual = lang;
     atualizarInterface();
 }
 
-document.getElementById("btnIdioma").addEventListener("click", alternarIdioma);
-
 document.addEventListener("DOMContentLoaded", () => {
     atualizarInterface();
+
+    document.querySelectorAll(".btn-lang").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const lang = e.target.getAttribute("data-lang");
+            if (lang) mudarIdioma(lang);
+        });
+    });
 });
