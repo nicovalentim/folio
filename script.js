@@ -16,6 +16,37 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// contato
+function enviarEmail() {
+    const form = document.getElementById('contato');
+    if (!form) {
+        console.error("Formulário de contato não encontrado!");
+        return;
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nome = document.querySelector('input[name="contatoNome"]').value;
+        const assuntoSemFiltro = document.querySelector('input[name="contatoAssunto"]').value;
+            const assunto = encodeURIComponent(assuntoSemFiltro);
+        const mensagemSemFiltro = document.querySelector('textarea[name="contatoMensagem"]').value;
+            const mensagem = encodeURIComponent(mensagemSemFiltro);
+        const sucesso = document.getElementById("contatoSucesso");
+
+        const destinatario = "nico_porfolio@outlook.com";
+        const corpoEmail = `Enviada por: ${nome}\n\nMensagem:\n${mensagem}`;
+        const mailtoLink = `mailto:${destinatario}?subject=${assunto}&body=${corpoEmail}`;
+
+        window.location.href = mailtoLink;
+
+        if (sucesso) sucesso.innerHTML = "Seu aplicativo de e-mail foi aberto!";
+        form.reset();
+    });
+}
+
+enviarEmail();
+
 // indicadores (para a busca)
 const PORTFOLIO_TOPIC = "folio";
 const PREVIEW_FILE = "preview.jpg";
@@ -26,11 +57,8 @@ const projetosContainer = document.getElementById("projetosContainer");
 // buscar repos
 async function carregarProjetos() {
     try {
-        const resposta = await fetch(
-            `https://api.github.com/users/nicovalentim/repos?per_page=100&sort=updated`
-        );
-
-        if (!resposta.ok) throw new Error(`GitHub API retornou ${resposta.status}`);
+        const resposta = await fetch(`https://api.github.com/users/nicovalentim/repos?per_page=100&sort=updated`);
+            if (!resposta.ok) throw new Error(`GitHub API retornou ${resposta.status}`);
 
         const repositorios = await resposta.json();
             projetos = repositorios.filter((repo) =>
@@ -40,7 +68,6 @@ async function carregarProjetos() {
             if (projetos.length === 0) {
                 projetosContainer.innerHTML =
                     "<p>Nenhum projeto encontrado.</p>";
-
                 btnAnterior.style.display = "none";
                 btnProximo.style.display = "none";
                 return;
@@ -61,9 +88,8 @@ function criarProjetos() {
 
     projetos.forEach((projeto, index) => {
         const elemento = document.createElement("div");
-
-        elemento.classList.add("exemplo");
-        elemento.id = `projeto_${index}`;
+            elemento.classList.add("exemplo");
+            elemento.id = `projeto_${index}`;
 
         const imagem =
             `https://raw.githubusercontent.com/nicovalentim/` +
@@ -72,29 +98,29 @@ function criarProjetos() {
             `${PREVIEW_FILE}`;
 
         elemento.innerHTML = `
-            <div>
-                <img
-                    src="${imagem}"
-                    alt="${projeto.name}"
-                    onerror="this.onerror=null; this.src='imagens/_exemplo.jpg';"
-                />
+<div>
+    <img
+        src="${imagem}"
+        alt="${projeto.name}"
+        onerror="this.onerror=null; this.src='imagens/_exemplo.jpg';"
+    />
 
-                <span>
-                    <h2>${projeto.name}</h2>
-                    <h1>${projeto.description || "Sem descrição."}</h1>
+    <span>
+        <h2>${projeto.name}</h2>
+        <h1>${projeto.description || "Sem descrição."}</h1>
 
-                    <p>
-                        <a
-                            class = "linkToGit"
-                            href="${projeto.html_url}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            ver projeto no github
-                        </a>
-                    </p>
-                </span>
-            </div>
+        <p>
+            <a
+                class = "linkToGit"
+                href="${projeto.html_url}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ver projeto no github
+            </a>
+        </p>
+    </span>
+</div>
         `;
 
         projetosContainer.appendChild(elemento);
