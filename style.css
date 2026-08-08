@@ -25,15 +25,34 @@ body {
 
 h1 {
     font-family: var(--fontePrimaria);
-    font-size: 7em;
     margin: 0;
 }
     h2 {
         font-weight: 200;
+        font-size: 1em;
         text-transform: uppercase;
     }
 
 /* globais */
+/* Botão de Idioma */
+.btn-lang {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 2px 6px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+    .btn-lang:hover {
+        background-color: rgb(var(--saturacaoAlta));
+        color: rgb(var(--luminosidadeAlta));
+        border-color: rgb(var(--saturacaoAlta));
+    }
+
 nav {
     color: rgb(var(--luminosidadeAlta));
     font-weight: 500;
@@ -63,20 +82,29 @@ nav {
     nav div {
         margin-left: auto;
     }
+
 section {
     height: 100vh;
+
+    background-blend-mode: multiply;
+    background-size: cover;
 }
+    .marcado {
+        color: rgb(var(--saturacaoAlta));
+    }
 
 /* seção home */
 #home {
     background-color: rgba(var(--luminosidadeBaixa), 0.9);
+    background-image: url("imagens/bg_textile.jpg");
+
     color: rgb(var(--luminosidadeAlta));
 }
-    #home .marcado {
-        color: rgb(var(--saturacaoAlta));
+    #home h1 {
+        font-size: 5em;
     }
     #home h2 {
-        color: rgba(var(--saturacaoAlta), 0.8);
+        color: rgb(var(--saturacaoBaixa));
     }
     #home p {
         text-transform: lowercase;
@@ -91,6 +119,8 @@ section {
 /* seção de portfólio */
 #projetos {
     background-color: rgb(var(--luminosidadeAlta));
+    background-image: url("imagens/bg_noise.jpg");
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,12 +152,14 @@ section {
 .seta {
     background: none;
     border: none;
+    cursor: pointer;
+
     color: rgb(var(--luminosidadeBaixa));
     font-size: 2.5em;
-    cursor: pointer;
+    font-weight: 800;
+
     padding: 8px 16px;
     transition: transform 0.2s, color 0.2s;
-    z-index: 10;
 }
     .seta:hover {
         background-color: transparent;
@@ -191,7 +223,8 @@ section {
 
 /* seção de sobre */
 #sobre {
-    background-color: rgba(var(--luminosidadeBaixa));
+    background-color: rgba(var(--saturacaoAlta));
+    background-image: url("imagens/bg_noise.jpg");
 
     display: flex;
     align-items: center;
@@ -199,7 +232,7 @@ section {
     flex-direction: column;
 }
     #sobre h2 {
-        color: rgb(var(--luminosidadeAlta));
+        color: rgb(var(--luminosidadeBaixa));
         margin-bottom: 16px;
     }
     #sobre img {
@@ -209,8 +242,10 @@ section {
 
 /* seção de contato */
 #contato {
-    background-color: rgb(var(--luminosidadeAlta));
-    color: rgb(var(--luminosidadeBaixa));
+    background-color: rgb(var(--luminosidadeBaixa));
+    background-image: url("imagens/bg_textile.jpg");
+
+    color: rgb(var(--luminosidadeAlta));
 
     display: grid;
     align-content: center;
@@ -218,25 +253,32 @@ section {
     text-align: left;
 }
     #contato button {
-        background-color: rgb(var(--luminosidadeBaixa));
-        color: rgb(var(--luminosidadeAlta));
+        background-color: rgb(var(--luminosidadeAlta));
+        color: rgb(var(--luminosidadeBaixa));
 
+        font-weight: 500 !important;
         text-align: center !important;
 
         border: none;
         padding: 8px 16px;
     }
     #contato form {
+        background: none;
         margin-top: 16px;
         display: flex;
         flex-direction: column;
+    }
+    #contato h1 {
+        text-align: left;
+        text-transform: lowercase;
+        font-size: 4em;
     }
     #contato h2 {
         text-align: center;
     }
     #contato textarea {
-        border-right: 1px solid rgba(var(--luminosidadeBaixa),0.1);
-        height: 160px;
+        border-right: 1px solid rgba(var(--luminosidadeAlta),0.1);
+        height: 4em;
         resize: none;
     }
         #contato button,
@@ -245,13 +287,13 @@ section {
         #contato label {
             font: inherit;
             text-align: inherit;
-            margin: 16px 0;
+            margin: 8px 0;
         }
         #contato input,
         #contato textarea {
             background-color: inherit;
             border: none;
-            border-bottom: 1px solid rgba(var(--luminosidadeBaixa),0.1);
+            border-bottom: 1px solid rgba(var(--luminosidadeAlta),0.1);
             margin: 8px 0;
             padding: 8px 4px;
         }
