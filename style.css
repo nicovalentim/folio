@@ -93,6 +93,10 @@ section {
         color: rgb(var(--saturacaoAlta));
     }
 
+input[type="text"] {
+  color: rgb(var(--luminosidadeAlta));
+}
+
 /* seção home */
 #home {
     background-color: rgba(var(--luminosidadeBaixa), 0.9);
