@@ -141,12 +141,12 @@ section {
     width: 90%;
     position: relative;
 }
-    .carrossel-container {
+    .carrosselContainer {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-        .carrossel-container .exemplo:not(:first-child) {
+        .carrosselContainer .exemplo:not(:first-child) {
             display: none;
         }
 .seta {
@@ -251,7 +251,13 @@ section {
     align-content: center;
     justify-content: center;
     text-align: left;
+
+    min-width: 100%;
 }
+    .contatoContainer {
+        width: 400px;
+        max-width: 90%;
+    }
     #contato button {
         background-color: rgb(var(--luminosidadeAlta));
         color: rgb(var(--luminosidadeBaixa));
