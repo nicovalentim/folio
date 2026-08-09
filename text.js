@@ -5,11 +5,21 @@ export const traducoes = {
         navContato: "contact",
         navHome: "home",
         navProjetos: "projects",
-        navSobre: "about",
+        navSobre: "about me",
 
-        homeSubtitulo: "Lorem ipsum",
-        homeTitulo: 'Lorem ipsum dolor <span class="marcado">sit amet</span>.',
-        homeDescricao: "Maecenas sed erat at est condimentum elementum vel quis nulla. Sed interdum lacinia est, vel consectetur turpis aliquet eu.",
+        homeSubtitulo: "Oh, And in case I don't see ya: good afternoon, good evening, and good night!",
+        homeTitulo: `
+            'ello, i'm <span class="marcado">Nico</span>!<br />
+            I'm a full-stack web dev<br />
+            and a UX designer.
+            `,
+        homeDescricao: `
+            Passionate about building cool things and learning new tech.<br />
+            Explore my work below!
+        `,
+        cv: "get my CV",
+        btnContato: "contact me",
+        ou: "or just",
 
         carregando: "loading projects...",
         semProjetos: "No projects found.",
@@ -17,7 +27,38 @@ export const traducoes = {
         gitLink: "view project on github",
         semDescricao: "No description.",
 
-        imgSobre: "imagens/about_en.gif",
+        filosofiaTitulo: "approach",
+        filosofiaTexto: `
+            textão sobre o que bodegas eu tenho como filosofia, não sei o que escrever agora aaaaaaaaaaaa
+        `,
+        jornadaTitulo: "background",
+        jornadaTexto: `
+            texto sobre quem eu sou, de onde eu vim etc
+        `,
+        habilidatesTitulo: "core strengths",
+        habilidadesTexto: `
+            <li>
+                ab
+            </li><li>
+                cd
+            </li><li>
+                ef
+            </li><li>
+                gh
+            </li><li>
+                ij
+            </li><li>
+                kl
+            </li>
+        `,
+        aprendendoTitulo: "what I'm learning",
+        aprendendoTexto: `
+            qq eu to estudando mano
+        `,
+        hobbiesTitulo: "beyond coding",
+        hobbiesTexto: `
+            texto grande sobre hobbies
+        `,
 
         contatoTitulo: 'tell me <br /><span class="marcado">something</span><br />new!',
         labelNome: "Name",
@@ -33,18 +74,28 @@ export const traducoes = {
         navContato: "contato",
         navHome: "home",
         navProjetos: "projetos",
-        navSobre: "sobre",
+        navSobre: "sobre eu",
 
-        homeSubtitulo: "subtítulo da seção",
-        homeTitulo: 'Um texto de lorem ipsum que <span class="marcado">eu quero</span> usar de título.',
-        homeDescricao: "Um texto de lorem ipsum que eu quero usar de subtítulo",
+        homeSubtitulo: "Pra que amanhã não seja só um ontem com um novo nome",
+        homeTitulo: `
+            Opa, eu sou o <span class="marcado">Nico</span>!<br />
+            Sou um web dev full-stack<br />
+            e designer UX.
+            `,
+        homeDescricao: `
+            Apaixonado por criar coisas legais e aprender tecnologias novas.<br />
+            Dá uma olhada no meu trabalho logo abaixo!
+        `,
+        cv: "veja meu CV",
+        btnContato: "me manda uma mensagem",
+        ou: "ou só",
 
         carregando: "carregando projetos...",
         semProjetos: "Nenhum projeto encontrado.",
         erroProjetos: "Não foi possível carregar os projetos.",
         gitLink: "ver projeto no github",
         semDescricao: "Sem descrição.",
-        
+
         imgSobre: "imagens/about_pt.gif",
 
         contatoTitulo: 'me manda <br /><span class="marcado">um alô</span>!',
@@ -61,11 +112,21 @@ export const traducoes = {
         navContato: "お問い合わせ",
         navHome: "ホーム",
         navProjetos: "プロジェクト",
-        navSobre: "概要",
+        navSobre: "私について",
 
-        homeSubtitulo: "サブタイトル",
-        homeTitulo: 'ここに<span class="marcado">タイトル</span>が入ります。',
-        homeDescricao: "ここに説明文が入ります。",
+        homeSubtitulo: "人の夢は終わらねェ!",
+        homeTitulo: `
+            よ、<span class="marcado">ニコ</span>です！!<br />
+            フルスタックWebエンジニア<br />
+            とUXデザイナーやってます。
+            `,
+        homeDescricao: `
+            面白いものを作ることと、新しい技術を学ぶのが大好き。<br />
+            ぜひ作品を見ていってね！
+        `,
+        cv: "CVを見る",
+        btnContato: "連絡する",
+        ou: "それとも",
 
         carregando: "読み込み中...",
         semProjetos: "プロジェクトが見つかりません。",

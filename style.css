@@ -4,10 +4,15 @@
     --luminosidadeAlta: 220, 210, 210;
     --luminosidadeBaixa: 18, 22, 25;
     --saturacaoAlta: 251, 63, 88;
+    --saturacaoBaixa: 205, 78, 94;
 
     --fontePrimaria: 'Outfit', sans-serif;
     --fonteSecundaria: 'Inter', sans-serif;
 }
+    ::selection {
+        background-color: rgb(var(--saturacaoAlta));
+        color: rgb(var(--luminosidadeAlta));
+    }
 
 body {
     background-color: rgb(var(--luminosidadeAlta));
@@ -16,7 +21,7 @@ body {
     padding: 0;
 
     font-family: var(--fonteSecundaria);
-    font-weight: 200;
+    font-weight: 400;
 }
     body * {
         margin: 0;
@@ -28,13 +33,15 @@ h1 {
     margin: 0;
 }
     h2 {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 1em;
         text-transform: uppercase;
     }
+hr {
+    width: 100%;
+}
 
 /* globais */
-/* Botão de Idioma */
 .btn-lang {
     background: transparent;
     border: 1px solid currentColor;
@@ -82,6 +89,12 @@ nav {
     nav div {
         margin-left: auto;
     }
+    nav[data-active-section="sobre"] a:hover,
+    nav[data-active-section="sobre"] .btn-lang:hover {
+        background-color: rgb(var(--luminosidadeBaixa));
+        color: rgb(var(--luminosidadeAlta));
+        border-color: rgb(var(--luminosidadeBaixa));
+    }
 
 section {
     height: 100vh;
@@ -99,6 +112,10 @@ section {
     background-image: url("imagens/bg_textile.jpg");
 
     color: rgb(var(--luminosidadeAlta));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     #home h1 {
         font-size: 5em;
@@ -106,15 +123,29 @@ section {
     #home h2 {
         color: rgb(var(--saturacaoBaixa));
     }
-    #home p {
-        text-transform: lowercase;
-    }
 
-    header {
-        position: absolute;
-        top: 25%;
-        left: 25%;
+    header a {
+        background-color: rgb(var(--luminosidadeAlta));
+        color: rgb(var(--luminosidadeBaixa));
     }
+        header a,
+        #sobre a {
+            transition: background-color 0.2s, color 0.2s;
+
+            font-weight: 500;
+            text-decoration: none;
+            padding: 4px 8px;
+        }
+            header a:hover {
+                background-color: rgb(var(--saturacaoAlta));
+                color: rgb(var(--luminosidadeAlta));
+            }
+        header hr {
+            margin: 32px 0;
+        }
+        header span {
+            margin: 0 8px;
+        }
 
 /* seção de portfólio */
 #projetos {
@@ -142,7 +173,7 @@ section {
     position: relative;
 }
     .carrosselContainer {
-        width: 100%;
+        width: 60%;
         display: flex;
         justify-content: center;
     }
@@ -173,6 +204,7 @@ section {
     .exemplo a {
         color: inherit;
         text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
     }
         .exemplo a:hover {
             color: rgb(var(--saturacaoAlta));
@@ -193,7 +225,7 @@ section {
     }
     .exemplo img {
         height: 75vh;
-        width: 25%;
+        width: 40%;
         object-fit: cover;
 
         clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
@@ -223,21 +255,83 @@ section {
 
 /* seção de sobre */
 #sobre {
-    background-color: rgba(var(--saturacaoAlta));
+    background-color: rgba(var(--saturacaoBaixa));
     background-image: url("imagens/bg_noise.jpg");
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    min-width: 100%;
 }
+    #sobre h1 {
+        background-color: rgb(var(--saturacaoBaixa));
+        color: rgb(var(--luminosidadeAlta));
+
+        font-size: 5em;
+
+        margin-bottom: 32px;
+        padding: 8px 16px;
+        width: fit-content;
+    }
+        #sobre h1::selection {
+            background-color: rgb(var(--luminosidadeBaixa));
+        }
     #sobre h2 {
         color: rgb(var(--luminosidadeBaixa));
         margin-bottom: 16px;
     }
-    #sobre img {
-        height: 80%;
-        width: auto;
+
+.sobrePacote {
+    background-blend-mode: multiply;
+    background-color: rgb(var(--luminosidadeAlta));
+    background-image: url("imagens/bg_noise.jpg");
+    padding: 64px;
+}
+
+.sobreContainer {
+    width: 860px;
+    max-width: 90%;
+
+    display: grid;
+    gap: 16px;
+    padding: 32px
+}
+    .sobreContainer a {
+        background-color: rgb(var(--saturacaoBaixa));
+        color: rgb(var(--luminosidadeAlta));
+        user-select: none;
+
+        font-size: 1.2em;
+        margin-top: 16px;
+        grid-column: span 2;
+
+        justify-self: end;
+        width: fit-content;
+    }
+        .sobreContainer a:hover {
+            background-color: rgb(var(--luminosidadeBaixa));
+            color: rgb(var(--luminosidadeAlta));
+        }
+    .sobreContainer img {
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+    }
+
+#tabela {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 16px 25%;
+}
+    #tabela hr {
+        border: 1px solid rgba(var(--luminosidadeBaixa), 0.2);
+        grid-column: span 2;
+    }
+    #tabela ul {
+        list-style-position: inside;
     }
 
 /* seção de contato */

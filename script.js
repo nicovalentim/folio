@@ -16,6 +16,7 @@ window.addEventListener("scroll", () => {
     if (currentSection) {
         const color = currentSection.getAttribute("data-nav-color") || "black";
         nav.style.color = color;
+        nav.setAttribute("data-active-section", currentSection.id);
     }
 });
 
