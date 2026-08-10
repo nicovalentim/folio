@@ -264,7 +264,7 @@ window.idiomaAtual = idiomaAtual;
 document.addEventListener("DOMContentLoaded", () => {
     atualizarInterface();
 
-    document.querySelectorAll(".btn-lang").forEach((btn) => {
+    document.querySelectorAll(".linguagem").forEach((btn) => {
         btn.addEventListener("click", (e) => {
             const lang = e.target.getAttribute("data-lang");
             if (lang) mudarIdioma(lang);

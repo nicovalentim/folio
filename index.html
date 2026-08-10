@@ -7,19 +7,30 @@
 
 <body>
     <nav>
-        <button class="btn-lang" data-lang="en">EN</button>
-        <button class="btn-lang" data-lang="pt">PT</button>
-        <button class="btn-lang" data-lang="ja">JP</button>
-        <div>
-            <a href="#home" data-i18n="navHome"></a> -
-            <a href="#projetos" data-i18n="navProjetos"></a> -
-            <a href="#sobre" data-i18n="navSobre"></a> -
+        <div class="linguagemContainer">
+            <button class="linguagemContainerBtn">🌏︎</button>
+            <div class="linguagensMenu">
+                <button class="linguagem" data-lang="en">EN</button>
+                <button class="linguagem" data-lang="pt">PT</button>
+                <button class="linguagem" data-lang="ja">JP</button>
+            </div>
+        </div>
+
+        <button class="borgar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="secoes">
+            <a href="#home" data-i18n="navHome"></a>
+            <a href="#projetos" data-i18n="navProjetos"></a>
+            <a href="#sobre" data-i18n="navSobre"></a>
             <a href="#contato" data-i18n="navContato"></a>
         </div>
     </nav>
 
     <section id="home" data-nav-color="rgb(var(--luminosidadeAlta))">
-
         <header>
             <h2 data-i18n="homeSubtitulo"></h2>
             <h1 data-i18n="homeTitulo"></h1>
@@ -29,28 +40,21 @@
             <span data-i18n="ou"></span>
             <a href="#contato" data-i18n="btnContato"></a>
         </header>
-
     </section>
 
     <section id="projetos" data-nav-color="rgb(var(--luminosidadeBaixa))">
-
         <div class="carrossel">
             <button class="seta" id="btnAnterior"><</button>
-
             <div class="carrosselContainer" id="projetosContainer">
                 <p data-i18n="carregando"></p>
             </div>
-
             <button class="seta" id="btnProximo">></button>
         </div>
-
     </section>
 
     <section id="sobre" data-nav-color="rgb(var(--luminosidadeBaixa))">
-
         <div class="sobrePacote">
             <h1 data-i18n="navSobre"></h1>
-
             <div class="sobreContainer">
                 <div id="tabela">
                     <h2 data-i18n="jornadaTitulo"></h2>
@@ -60,8 +64,7 @@
                     <p data-i18n="filosofiaTexto"></p>
                     <hr />
                     <h2 data-i18n="habilidatesTitulo"></h2>
-                    <ul data-i18n="habilidadesTexto">
-                    </ul>
+                    <ul data-i18n="habilidadesTexto"></ul>
                     <hr />
                     <h2 data-i18n="aprendendoTitulo"></h2>
                     <ul data-i18n="aprendendoTexto"></ul>
@@ -73,11 +76,9 @@
                 <a href="" data-i18n="cv"></a>
             </div>
         </div>
-
     </section>
 
     <section id="contato" data-nav-color="rgb(var(--luminosidadeAlta))">
-
         <div class="contatoContainer">
             <h1 data-i18n="contatoTitulo"></h1>
             <form class="form" id="contato" onsubmit="return false;">
@@ -86,11 +87,10 @@
                 <label data-i18n="labelAssunto"></label>
                 <input type="text" name="contatoAssunto" data-i18n-placeholder="placeholderAssunto" required />
                 <label data-i18n="labelMensagem"></label>
-                <textarea name="contatoMensagem" data-i18n-placeholder="placeholderMensagem" required ></textarea>
+                <textarea name="contatoMensagem" data-i18n-placeholder="placeholderMensagem" required></textarea>
                 <button name="enviarEmail" type="submit" data-i18n="btnEnviar"></button>
             </form>
         </div>
-
     </section>
 
 <script type="module" src="script.js"></script>

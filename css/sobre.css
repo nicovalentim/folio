@@ -1,0 +1,103 @@
+#sobre {
+    background-color: rgba(var(--saturacaoBaixa));
+    background-image: url("imagens/bg_noise.jpg");
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-width: 100%;
+}
+    #sobre a {
+        transition: background-color 0.2s, color 0.2s;
+
+        font-weight: 500;
+        text-decoration: none;
+        padding: 4px 8px;
+    }
+    #sobre h1 {
+        background-color: rgb(var(--saturacaoBaixa));
+        color: rgb(var(--luminosidadeAlta));
+
+        font-size: 5em;
+
+        margin-bottom: 32px;
+        padding: 8px 16px;
+        width: fit-content;
+    }
+        #sobre h1::selection {
+            background-color: rgb(var(--luminosidadeBaixa));
+        }
+    #sobre h2 {
+        color: rgb(var(--luminosidadeBaixa));
+        margin-bottom: 16px;
+    }
+
+.sobrePacote {
+    background-blend-mode: multiply;
+    background-color: rgb(var(--luminosidadeAlta));
+    background-image: url("imagens/bg_noise.jpg");
+    padding: 64px;
+}
+
+.sobreContainer {
+    width: 860px;
+    max-width: 90%;
+
+    display: grid;
+    gap: 16px;
+    padding: 32px
+}
+    .sobreContainer a {
+        background-color: rgb(var(--saturacaoBaixa));
+        color: rgb(var(--luminosidadeAlta));
+        user-select: none;
+
+        font-size: 1.2em;
+        margin-top: 16px;
+        grid-column: span 2;
+
+        justify-self: end;
+        width: fit-content;
+    }
+        @media (hover: hover) {
+            .sobreContainer a:hover {
+                background-color: rgb(var(--luminosidadeBaixa));
+                color: rgb(var(--luminosidadeAlta));
+            }
+        }
+    .sobreContainer img {
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+    }
+
+#tabela {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+}
+    #tabela hr {
+        border: 1px solid rgba(var(--luminosidadeBaixa), 0.2);
+        grid-column: span 2;
+    }
+    #tabela ul {
+        list-style-position: inside;
+    }
+
+@media (max-width: 1080px) {
+    #sobre {
+        font-size: 2em;
+    }
+        #sobre a {
+            padding: 8px 16px;
+        }
+
+    .sobrepacote {
+        padding: 10% 0;
+        width: 100%;
+        justify-items: center !important;
+    }
+}

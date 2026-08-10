@@ -1,0 +1,60 @@
+/* seção home */
+#home {
+    background-color: rgba(var(--luminosidadeBaixa), 0.9);
+    background-image: url("imagens/bg_textile.jpg");
+
+    color: rgb(var(--luminosidadeAlta));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #home h1 {
+        font-size: 5em;
+    }
+    #home h2 {
+        color: rgb(var(--saturacaoBaixa));
+    }
+
+    header a {
+        background-color: rgb(var(--luminosidadeAlta));
+        color: rgb(var(--luminosidadeBaixa));
+    }
+        header a {
+            transition: background-color 0.2s, color 0.2s;
+
+            font-weight: 500;
+            text-decoration: none;
+            padding: 4px 8px;
+        }
+        @media (hover: hover) {
+            header a:hover {
+                background-color: rgb(var(--saturacaoAlta));
+                color: rgb(var(--luminosidadeAlta));
+            }
+        }
+        header hr {
+            margin: 32px 0;
+        }
+        header span {
+            margin: 0 8px;
+        }
+
+@media (max-width: 1080px) {
+    #home {
+        padding: 10%;
+    }
+    #home a {
+        padding: 8px 16px;
+    }
+    #home h1 {
+        font-size: 3em;
+    }
+    header {
+        justify-self: center;
+        font-size: 2.5em;
+    }
+        header span {
+            margin: 0 16px;
+        }
+}
