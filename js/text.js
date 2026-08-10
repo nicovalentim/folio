@@ -89,7 +89,7 @@ export const traducoes = {
             Dá uma olhada no meu trabalho logo abaixo!
         `,
         cv: "veja meu CV",
-        btnContato: "me manda uma mensagem",
+        btnContato: "fale comigo",
         ou: "ou só",
 
         carregando: "carregando projetos...",
@@ -98,7 +98,7 @@ export const traducoes = {
         gitLink: "ver projeto no github",
         semDescricao: "Sem descrição.",
 
-        jornadaTitulo: "quem sou eu",
+        jornadaTitulo: "quem eu sou",
         jornadaTexto: `
             minha formação em Publicidade e Propaganda foi seguida por pós-graduações em Artes Visuais e UX. Criar interfaces e sistemas funcionais me levou ao desenvolvimento web, onde posso usar tudo dessas diferentes áreas
         `,
@@ -106,7 +106,7 @@ export const traducoes = {
         filosofiaTexto: `
             entendo branding, artes visuais e UX, e isso me faz encarar o desenvolvimento web tanto de uma perspectiva técnica quanto visual
         `,
-        habilidatesTitulo: "no que sou",
+        habilidatesTitulo: "no que sou bom",
         habilidadesTexto: `
             <li>
                 desenvolvimento web full-stack
@@ -118,7 +118,7 @@ export const traducoes = {
                 design centrado no usuário
             </li>
         `,
-        aprendendoTitulo: "no que estou trabalhando",
+        aprendendoTitulo: "o que estou fazendo",
         aprendendoTexto: `
             <li>
             concluindo minha graduação em Análise e Desenvolvimento de Sistemas
