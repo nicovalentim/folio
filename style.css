@@ -191,13 +191,11 @@ section {
             margin-top: 12px;
             padding: 16px 0;
 
-            flex-direction: column;
+            flex-direction: row;
             align-items: end;
             position: absolute;
 
-            left: 0;
-            top: 100%;
-            width: 100%;
+            right: 66px;
         }
             nav .secoes a:not(:last-child)::after {
                 content: "";
@@ -208,7 +206,7 @@ section {
             }
             .secoes a {
                 background-color: rgb(var(--saturacaoAlta));
-                font-size: 2em;
+                font-size: 2.25em;
 
                 margin-right: 16px;
                 padding: 8px;
@@ -240,7 +238,8 @@ section {
                 display: flex !important;
             }
             .linguagensMenu .linguagem {
-                margin: 0;
+                font-size: 1.25em;
+                margin: 0 8px;
             }
 
     .borgar {
