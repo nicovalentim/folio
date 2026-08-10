@@ -107,6 +107,7 @@
         }
         #contato h1 {
             margin-bottom: 0;
+            word-break: keep-all;
         }
         #contato button,
         #contato input,

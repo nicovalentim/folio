@@ -140,9 +140,9 @@ export const traducoes = {
         emailSucesso: "Seu aplicativo de e-mail foi aberto!"
     },
     ja: {
-        navContato: "お問い合わせ",
+        navContato: "連絡",
         navHome: "ホーム",
-        navProjetos: "プロジェクト",
+        navProjetos: "作品",
         navSobre: "私について",
 
         homeSubtitulo: "人の夢は終わらねェ!",
