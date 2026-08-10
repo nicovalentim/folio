@@ -178,24 +178,28 @@ section {
     }
 
 @media (max-width: 1080px) {
+    section {
+        min-height: 88vh;
+    }
+
     nav {
-        background-color: rgb(var(--saturacaoAlta));
+        background-color: rgb(var(--saturacaoBaixa));
 
         justify-content: space-between;
+        height: 6em;
         padding: 0.8em 16px;
     }
         nav .secoes {
             display: none;
 
             border-radius: 8px;
-            margin-top: 12px;
             padding: 16px 0;
 
             flex-direction: row;
             align-items: end;
             position: absolute;
 
-            right: 66px;
+            right: 144px;
         }
             nav .secoes a:not(:last-child)::after {
                 content: "";
@@ -205,10 +209,10 @@ section {
                 display: flex !important;
             }
             .secoes a {
-                background-color: rgb(var(--saturacaoAlta));
+                background-color: rgb(var(--saturacaoBaixa));
                 font-size: 2.25em;
 
-                margin-right: 16px;
+                margin-left: 32px;
                 padding: 8px;
             }
 
@@ -246,11 +250,20 @@ section {
 
     .borgar {
         display: flex !important;
+        margin-right: 48px;
     }
 }
 
-@media (min-width: 1200px) {
-    nav {
-        font-size: 0.6em;
+@media (max-width: 768px) {
+    section {
+        min-height: 80vh;
     }
+    nav {
+        font-size: 0.5em;
+        height: 8em;
+    }
+        .secoes a {
+            font-size: 3em;
+            margin-left: 16px;
+        }
 }

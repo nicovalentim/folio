@@ -16,6 +16,9 @@
         color: rgb(var(--saturacaoBaixa));
     }
 
+header {
+    width: 64%;
+}
     header a {
         background-color: rgb(var(--luminosidadeAlta));
         color: rgb(var(--luminosidadeBaixa));
@@ -40,7 +43,7 @@
             margin: 0 8px;
         }
 
-@media (aspect-ratio < 1) {
+@media (max-width: 1080px) {
     #home {
         padding: 10%;
     }
@@ -53,22 +56,23 @@
     header {
         justify-self: center;
         font-size: 2.5em;
+        width: 90%;
     }
         header span {
             margin: 0 16px;
         }
 }
 
-@media (aspect-ratio < 1) and (min-width: 1200px) {
+@media (max-width: 768px) {
     #home {
-        font-size: 1.75em;
+        font-size: 0.75em;
         padding: 20% 10%;
-    }
-    #home h1 {
-        font-size: 2em;
     }
     header {
         justify-self: center;
         font-size: 2em;
     }
+        header h1 {
+            font-size: 2.5em !important;
+        }
 }

@@ -10,12 +10,10 @@ export const traducoes = {
         homeSubtitulo: "Oh, And in case I don't see ya: good afternoon, good evening, and good night!",
         homeTitulo: `
             'ello, i'm <span class="marcado">Nico</span>!<br />
-            I'm a full-stack web dev<br />
-            and a UX designer.
+            I'm a full-stack web dev and a UX designer.
             `,
         homeDescricao: `
-            Passionate about building cool things and learning new tech.<br />
-            Explore my work below!
+            Passionate about building cool things and learning new tech. Explore my work below!
         `,
         cv: "get my CV",
         btnContato: "contact me",
@@ -81,12 +79,10 @@ export const traducoes = {
         homeSubtitulo: "Pra que amanhã não seja só um ontem com um novo nome",
         homeTitulo: `
             Opa, eu sou o <span class="marcado">Nico</span>!<br />
-            Sou um web dev full-stack<br />
-            e designer UX.
+            Sou um web dev full-stack e designer UX.
             `,
         homeDescricao: `
-            Apaixonado por criar coisas legais e aprender tecnologias novas.<br />
-            Dá uma olhada no meu trabalho logo abaixo!
+            Apaixonado por criar coisas legais e aprender tecnologias novas. Dá uma olhada no meu trabalho logo abaixo!
         `,
         cv: "veja meu CV",
         btnContato: "fale comigo",
@@ -152,12 +148,10 @@ export const traducoes = {
         homeSubtitulo: "人の夢は終わらねェ!",
         homeTitulo: `
             よ、<span class="marcado">ニコ</span>です！!<br />
-            フルスタックWebエンジニア<br />
-            とUXデザイナーやってます。
+            フルスタックWebエンジニアとUXデザイナーやってます。
             `,
         homeDescricao: `
-            面白いものを作ることと、新しい技術を学ぶのが大好き。<br />
-            ぜひ作品を見ていってね！
+            面白いものを作ることと、新しい技術を学ぶのが大好き。ぜひ作品を見ていってね！
         `,
         cv: "CVを見る",
         btnContato: "連絡する",

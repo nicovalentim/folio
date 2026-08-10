@@ -62,7 +62,6 @@
             background-color: inherit;
             border: none;
             border-bottom: 1px solid rgba(var(--luminosidadeAlta),0.1);
-            margin: 8px 0;
             padding: 8px 4px;
         }
         input[type="text"],
@@ -99,8 +98,24 @@
         }
 }
 
-@media (min-width: 1600px) {
+@media (max-width: 768px) {
     #contato {
         font-size: 1em;
     }
+        #contato button {
+            margin-top: 8px;
+        }
+        #contato h1 {
+            margin-bottom: 0;
+        }
+        #contato button,
+        #contato input,
+        #contato textarea,
+        #contato label {
+            margin: 8px 0;
+        }
+        #contato input,
+        #contato textarea {
+            padding: 4px 2px;
+        }
 }

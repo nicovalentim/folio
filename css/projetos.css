@@ -158,9 +158,11 @@
         }
 }
 
-@media (min-width: 1600px) {
+@media (max-width: 768px) {
     #projetos {
-        font-size: 0.6em;
-        padding: 20% 10%;
+        font-size: 0.5em;
     }
+        .carrosselContainer img {
+            height: 400px;
+        }
 }
