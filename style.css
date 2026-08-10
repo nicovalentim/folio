@@ -217,6 +217,7 @@ section {
     }
         .linguagemContainerBtn {
             display: block !important;
+            font-weight: 400;
         }
         .linguagensMenu {
             display: none;
@@ -239,6 +240,7 @@ section {
             }
             .linguagensMenu .linguagem {
                 font-size: 1.25em;
+                font-weight: 400;
                 margin: 0 8px;
             }
 
