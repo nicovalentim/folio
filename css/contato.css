@@ -99,8 +99,7 @@
         }
 }
 
-
-@media (max-width: 1080px) {
+@media (min-width: 1600px) {
     #contato {
         font-size: 1em;
     }

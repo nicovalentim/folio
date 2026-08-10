@@ -249,7 +249,7 @@ section {
     }
 }
 
-@media (max-width: 720px) {
+@media (min-width: 1200px) {
     nav {
         font-size: 0.6em;
     }

@@ -40,7 +40,7 @@
             margin: 0 8px;
         }
 
-@media (max-width: 1080px) {
+@media (aspect-ratio < 1) {
     #home {
         padding: 10%;
     }
@@ -59,9 +59,9 @@
         }
 }
 
-@media (max-width: 720px) {
+@media (aspect-ratio < 1) and (min-width: 1200px) {
     #home {
-        font-size: 0.9em;
+        font-size: 1.75em;
         padding: 20% 10%;
     }
     #home h1 {

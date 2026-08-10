@@ -158,7 +158,7 @@
         }
 }
 
-@media (max-width: 720px) {
+@media (min-width: 1600px) {
     #projetos {
         font-size: 0.6em;
         padding: 20% 10%;
