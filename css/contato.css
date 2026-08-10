@@ -73,7 +73,7 @@
 @media (max-width: 1080px) {
     #contato {
         font-size: 1.5em;
-        padding: 20% 10%;
+        padding: 10%;
     }
         #contato button,
         #contato input,
@@ -97,4 +97,11 @@
             width: max-content;
             max-width: 90%;
         }
+}
+
+
+@media (max-width: 1080px) {
+    #contato {
+        font-size: 1em;
+    }
 }

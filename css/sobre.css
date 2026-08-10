@@ -89,15 +89,24 @@
 
 @media (max-width: 1080px) {
     #sobre {
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
         #sobre a {
             padding: 8px 16px;
         }
 
     .sobrepacote {
-        padding: 25% 0;
+        padding: 10% 0;
         width: 100%;
         justify-items: center !important;
     }
+}
+
+@media (max-width: 1080px) {
+    #sobre {
+        font-size: 1em;
+    }
+        #sobre h1 {
+            font-size: 3em;
+        }
 }

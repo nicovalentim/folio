@@ -248,3 +248,9 @@ section {
         display: flex !important;
     }
 }
+
+@media (max-width: 720px) {
+    nav {
+        font-size: 0.6em;
+    }
+}
