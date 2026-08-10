@@ -323,8 +323,8 @@ section {
 
 #tabela {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 16px 25%;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
 }
     #tabela hr {
         border: 1px solid rgba(var(--luminosidadeBaixa), 0.2);

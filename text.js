@@ -27,37 +27,39 @@ export const traducoes = {
         gitLink: "view project on github",
         semDescricao: "No description.",
 
-        filosofiaTitulo: "approach",
-        filosofiaTexto: `
-            textão sobre o que bodegas eu tenho como filosofia, não sei o que escrever agora aaaaaaaaaaaa
-        `,
-        jornadaTitulo: "background",
+        jornadaTitulo: "who am I",
         jornadaTexto: `
-            texto sobre quem eu sou, de onde eu vim etc
+            my background in Advertising was followed by postgrads studies in Visual Arts and UX. Creating functional interfaces and systems led me to web dev, where I use knowledge gained in all these different areas
         `,
-        habilidatesTitulo: "core strengths",
+        filosofiaTitulo: "how I work",
+        filosofiaTexto: `
+            knowing branding, visual arts, and UX makes me approach web development from both a technical and visual perspective
+        `,
+        habilidatesTitulo: "what I'm good at",
         habilidadesTexto: `
             <li>
-                ab
+                full-stack web development
             </li><li>
-                cd
+                UI/UX design
             </li><li>
-                ef
+                visual design and branding
             </li><li>
-                gh
-            </li><li>
-                ij
-            </li><li>
-                kl
+                user centered design
             </li>
         `,
-        aprendendoTitulo: "what I'm learning",
+        aprendendoTitulo: "what I'm working on",
         aprendendoTexto: `
-            qq eu to estudando mano
+            <li>
+            completing my degree in system development
+            </li><li>
+            building full-stack web applications
+            </li><li>
+            improving my front and back-end skills
+            </li>
         `,
-        hobbiesTitulo: "beyond coding",
+        hobbiesTitulo: "what else do I do",
         hobbiesTexto: `
-            texto grande sobre hobbies
+            outside of development, I enjoy pilates, running, fighting games, and manga
         `,
 
         contatoTitulo: 'tell me <br /><span class="marcado">something</span><br />new!',
@@ -96,7 +98,40 @@ export const traducoes = {
         gitLink: "ver projeto no github",
         semDescricao: "Sem descrição.",
 
-        imgSobre: "imagens/about_pt.gif",
+        jornadaTitulo: "quem sou eu",
+        jornadaTexto: `
+            minha formação em Publicidade e Propaganda foi seguida por pós-graduações em Artes Visuais e UX. Criar interfaces e sistemas funcionais me levou ao desenvolvimento web, onde posso usar tudo dessas diferentes áreas
+        `,
+        filosofiaTitulo: "como eu trabalho",
+        filosofiaTexto: `
+            entendo branding, artes visuais e UX, e isso me faz encarar o desenvolvimento web tanto de uma perspectiva técnica quanto visual
+        `,
+        habilidatesTitulo: "no que sou",
+        habilidadesTexto: `
+            <li>
+                desenvolvimento web full-stack
+            </li><li>
+                design de UI/UX
+            </li><li>
+                design visual e branding
+            </li><li>
+                design centrado no usuário
+            </li>
+        `,
+        aprendendoTitulo: "no que estou trabalhando",
+        aprendendoTexto: `
+            <li>
+            concluindo minha graduação em Análise e Desenvolvimento de Sistemas
+            </li><li>
+            desenvolvendo aplicações web full-stack
+            </li><li>
+            melhorando em front e backend
+            </li>
+        `,
+        hobbiesTitulo: "o que mais eu faço",
+        hobbiesTexto: `
+            fora do desenvolvimento, gosto de praticar pilates e corrida, jogos de luta e ler mangás
+        `,
 
         contatoTitulo: 'me manda <br /><span class="marcado">um alô</span>!',
         labelNome: "Nome",
@@ -134,7 +169,40 @@ export const traducoes = {
         gitLink: "GitHubで見る",
         semDescricao: "説明なし。",
         
-        imgSobre: "imagens/about_ja.gif",
+        jornadaTitulo: "who am I",
+        jornadaTexto: `
+            広告のキャリアからスタートして、視覚芸術＆UXを学び、UI/システム作りからWeb開発へ。これまでの経験を全部掛け合わせてモノづくりをしています
+        `,
+        filosofiaTitulo: "how I work",
+        filosofiaTexto: `
+            ブランディング、ビジュアルアート、UXの経験を活かし、技術的な視点と視覚的な視点の両方からWeb開発に取り組んでいます
+        `,
+        habilidatesTitulo: "what I'm good at",
+        habilidadesTexto: `
+            <li>
+                フルスタックWeb開発
+            </li><li>
+                UI/UXデザイン
+            </li><li>
+                ビジュアルデザインとブランディング
+            </li><li>
+                ユーザー中心のデザイン
+            </li>
+        `,
+        aprendendoTitulo: "what I'm working on",
+        aprendendoTexto: `
+            <li>
+            システム開発の学位課程を修了すること
+            </li><li>
+            フルスタックWebアプリケーションの開発
+            </li><li>
+            フロントとバックエンドのスキル向上
+            </li>
+        `,
+        hobbiesTitulo: "what else do I do",
+        hobbiesTexto: `
+            開発以外の時間には、ピラティス、走る、格ゲー、漫画を楽しんでいます
+        `,
 
         contatoTitulo: '何かを<br /><span class="marcado">伝えて</span>！',
         labelNome: "お名前",
