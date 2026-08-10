@@ -66,31 +66,31 @@
         }
         input[type="text"],
         textarea {
-        color: rgb(var(--luminosidadeAlta));
+            color: rgb(var(--luminosidadeAlta));
         }
 
 @media (max-width: 1080px) {
     #contato {
-        font-size: 1.5em;
-        padding: 10%;
+        font-size: 1.2em;
+        padding: 5%;
     }
         #contato button,
         #contato input,
         #contato textarea,
         #contato label {
-            margin: 16px 0;
+            margin: 12px 0;
         }
         #contato button {
-            margin-top: 32px;
+            margin-top: 24px;
         }
         #contato h1 {
-            font-size: 5em;
-            margin-bottom: 64px;
+            font-size: 3.5em;
+            margin-bottom: 32px;
         }
         #contato input,
         #contato textarea {
             border-bottom: 1px solid rgba(var(--luminosidadeAlta), 0.5);
-            padding: 16px 0;
+            padding: 12px 0;
         }
         .contatoContainer {
             width: max-content;
@@ -100,12 +100,13 @@
 
 @media (max-width: 768px) {
     #contato {
-        font-size: 1em;
+        font-size: 1.1em;
     }
         #contato button {
             margin-top: 8px;
         }
         #contato h1 {
+            font-size: 2.8em;
             margin-bottom: 0;
             word-break: keep-all;
         }
@@ -119,4 +120,16 @@
         #contato textarea {
             padding: 4px 2px;
         }
+}
+
+@media (max-width: 480px) {
+    #contato {
+        font-size: 0.9em;
+    }
+    #contato h1 {
+        font-size: 2.2em;
+    }
+    .contatoContainer {
+        width: 100%;
+    }
 }

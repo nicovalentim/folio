@@ -199,7 +199,7 @@ section {
             align-items: end;
             position: absolute;
 
-            right: 144px;
+            right: 120px;
         }
             nav .secoes a:not(:last-child)::after {
                 content: "";
@@ -265,5 +265,41 @@ section {
         .secoes a {
             font-size: 3em;
             margin-left: 16px;
+        }
+}
+
+@media (max-width: 480px) {
+    nav {
+        font-size: 0.8em;
+        height: 4em;
+        padding: 0 12px;
+    }
+        nav .secoes {
+            right: 60px;
+        }
+
+    .borgar {
+        height: 25px;
+        width: 35px;
+        margin-right: 0;
+    }
+        .borgar.ativo span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        .borgar.ativo span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+    .secoes a {
+        font-size: 1em;
+        padding: 4px 6px;
+        margin-left: 4px;
+    }
+
+    .linguagem {
+        font-size: 0.8em !important;
+    }
+        .linguagemContainer {
+            font-size: 1em;
         }
 }

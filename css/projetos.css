@@ -123,21 +123,21 @@
             width: 100%;
         }
         .carrosselContainer h1 {
-            font-size: 5em;
+            font-size: 3em;
         }
         .carrosselContainer h2 {
-            font-size: 2em;
+            font-size: 1.5em;
         }
         .carrosselContainer img {
-            height: 640px;
+            height: 450px;
             width: 100%;
 
             clip-path: none;
-            margin: 32px 0;
+            margin: 24px 0;
         }
         .carrosselContainer p {
-            font-size: 3em;
-            margin: 32px 0;
+            font-size: 1.2em;
+            margin: 16px 0;
         }
 
     .exemplo div {
@@ -147,7 +147,7 @@
         padding: 8px 16px;
     }
     .seta {
-        font-size: 5em;
+        font-size: 3em;
 
         background-color: rgb(var(--luminosidadeBaixa));
         color: rgb(var(--luminosidadeAlta));
@@ -160,9 +160,27 @@
 
 @media (max-width: 768px) {
     #projetos {
-        font-size: 0.5em;
+        font-size: 0.9em;
     }
-        .carrosselContainer img {
-            height: 400px;
-        }
+    .carrosselContainer img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    #projetos {
+        font-size: 0.8em;
+    }
+    .carrosselContainer h1 {
+        font-size: 2em;
+    }
+    .carrosselContainer img {
+        height: 220px;
+    }
+    .carrosselContainer p {
+        font-size: 1em;
+    }
+    .exemplo span {
+        margin-left: 0;
+    }
 }

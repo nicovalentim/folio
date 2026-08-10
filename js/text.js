@@ -55,7 +55,7 @@ export const traducoes = {
             improving my front and back-end skills
             </li>
         `,
-        hobbiesTitulo: "what else do I do",
+        hobbiesTitulo: "what else I do",
         hobbiesTexto: `
             outside of development, I enjoy pilates, running, fighting games, and manga
         `,

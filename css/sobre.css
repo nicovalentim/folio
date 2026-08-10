@@ -47,7 +47,7 @@
 
     display: grid;
     gap: 16px;
-    padding: 32px
+    padding: 32px;
 }
     .sobreContainer a {
         background-color: rgb(var(--saturacaoBaixa));
@@ -98,14 +98,14 @@
 
 @media (max-width: 1080px) {
     #sobre {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
         #sobre a {
             padding: 8px 16px;
         }
 
-    .sobrepacote {
-        padding: 10% 0;
+    .sobrePacote {
+        padding: 5% 0;
         width: 100%;
         justify-items: center !important;
     }
@@ -113,9 +113,30 @@
 
 @media (max-width: 768px) {
     #sobre {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
         #sobre h1 {
             font-size: 3em;
         }
+    .sobreContainer {
+        padding: 16px;
+    }
+        .sobreContainer a {
+            justify-self: center;
+        }
+}
+
+@media (max-width: 480px) {
+    #sobre {
+        font-size: 0.8em;
+    }
+        #sobre h1 {
+            font-size: 2em;
+        }
+    #tabela {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sobreContainer a {
+        grid-column: span 1;
+    }
 }

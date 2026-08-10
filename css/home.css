@@ -1,4 +1,3 @@
-/* seção home */
 #home {
     background-color: rgba(var(--luminosidadeBaixa), 0.9);
     background-image: url("imagens/bg_textile.jpg");
@@ -22,14 +21,13 @@ header {
     header a {
         background-color: rgb(var(--luminosidadeAlta));
         color: rgb(var(--luminosidadeBaixa));
-    }
-        header a {
-            transition: background-color 0.2s, color 0.2s;
 
-            font-weight: 500;
-            text-decoration: none;
-            padding: 4px 8px;
-        }
+        transition: background-color 0.2s, color 0.2s;
+
+        font-weight: 500;
+        text-decoration: none;
+        padding: 4px 8px;
+    }
         @media (hover: hover) {
             header a:hover {
                 background-color: rgb(var(--saturacaoAlta));
@@ -38,9 +36,6 @@ header {
         }
         header hr {
             margin: 32px 0;
-        }
-        header span {
-            margin: 0 8px;
         }
 
 @media (max-width: 1080px) {
@@ -58,7 +53,7 @@ header {
         font-size: 2.5em;
         width: 90%;
     }
-        header span {
+        header span:not(.marcado) {
             margin: 0 16px;
         }
 }
@@ -66,11 +61,25 @@ header {
 @media (max-width: 768px) {
     #home {
         font-size: 0.75em;
-        padding: 20% 10%;
+        padding: 10% 5%;
     }
     header {
         justify-self: center;
         font-size: 2em;
+    }
+        header h1 {
+            font-size: 2.5em !important;
+        }
+}
+
+@media (max-width: 480px) {
+    #home {
+        font-size: 1em;
+        padding: 10% 5%;
+    }
+    header {
+        width: 95%;
+        font-size: 1em;
     }
         header h1 {
             font-size: 2.5em !important;
